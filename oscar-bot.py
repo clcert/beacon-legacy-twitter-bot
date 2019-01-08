@@ -1,6 +1,6 @@
 from config import select_from_file, select_from_list
 
-categories = ['p', 'c', 'f', 's']
+categories = ['p', 'c', 'f', 's']  # picture, cinematography, foreign and screenplay
 category = select_from_list(categories)
 
 if category == 'p':
