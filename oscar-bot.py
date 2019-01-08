@@ -1,4 +1,5 @@
-from config import select_from_file, select_from_list
+from config import select_from_file, select_from_list, api
+import argparse
 
 categories = ['p', 'c', 'f', 's']  # picture, cinematography, foreign and screenplay
 category = select_from_list(categories)
@@ -20,5 +21,11 @@ tweet = 'La película elegida aleatoriamente del día es "%s", ganadora del prem
         'año %s. Visítanos en https://random.uchile.cl para más información sobre nuestro servicio.' % \
         (title, options[1], year)
 
-# api.update_status(tweet)
-print(tweet)
+parser = argparse.ArgumentParser(description='Twitter Bot - Academy Winners Movies')
+parser.add_argument("-t", "--tweet", action="store_true", dest="tweet", default=False)
+options = parser.parse_args()
+
+if options.tweet:
+    api.update_status(tweet)
+else:
+    print(tweet)
