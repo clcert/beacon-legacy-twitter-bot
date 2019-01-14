@@ -1,13 +1,11 @@
 from config import select_from_file, select_from_list, api
 import argparse
 
-categories = ['p', 'c', 'f', 's']  # picture, cinematography, foreign and screenplay
+categories = ['p', 'f', 's']  # picture, foreign and screenplay
 category = select_from_list(categories)
 
 if category == 'p':
     options = ('oscar-best-picture', 'Mejor Película')
-elif category == 'c':
-    options = ('oscar-best-cinematography', 'Mejor Fotografía')
 elif category == 'f':
     options = ('oscar-best-foreign', 'Mejor Película Extranjera')
 else:
