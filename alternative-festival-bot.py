@@ -16,7 +16,8 @@ year = random_picture.split('(')[1][:-1]
 hashtags = options[2] + " #movies"
 tweet = '¿Quieres algo diferente para ver esta noche? Te recomendamos la película "%s", ' \
         'ganadora del máximo premio %s del año %s. Visítanos en ' \
-        'https://random.uchile.cl para más información sobre nuestro servicio. ' % (title, options[1], year) + hashtags
+        'https://random.uchile.cl/apps/movie-bot para más información sobre nuestro servicio. ' % \
+        (title, options[1], year) + hashtags
 
 parser = argparse.ArgumentParser(description='Twitter Bot - Alternative Awards Movies')
 parser.add_argument("-t", "--tweet", action="store_true", dest="tweet", default=False)

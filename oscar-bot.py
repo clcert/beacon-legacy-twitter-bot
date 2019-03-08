@@ -17,7 +17,7 @@ year = random_picture.split('(')[1][:-1]
 
 hashtags = "#academyawards #oscars #movies"
 tweet = 'La película elegida aleatoriamente del día es "%s", ganadora del premio Oscar a %s en el ' \
-        'año %s. Visítanos en https://random.uchile.cl para más información sobre nuestro servicio. ' % \
+        'año %s. Visítanos en https://random.uchile.cl/apps/movie-bot para más información sobre nuestro servicio. ' % \
         (title, options[1], year) + hashtags
 
 parser = argparse.ArgumentParser(description='Twitter Bot - Academy Winners Movies')
